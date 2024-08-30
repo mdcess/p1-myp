@@ -15,4 +15,16 @@ public abstract class Character {
 
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public int getHealth() {
+        return this.health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
+    }
+
 }
