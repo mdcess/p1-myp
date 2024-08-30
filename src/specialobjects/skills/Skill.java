@@ -13,21 +13,10 @@ public abstract class Skill {
 
     private String name;
     private int damage;
-    private float defense;
+    private double defense;
     private String attackName;
     private String doubleAttackName;
     private String defenseName;
-
-    public Skill(String name, int damage, float defense, String attackName, String doubleAttackName,
-            String defenseName) {
-        this.name = name;
-        this.damage = damage;
-        this.defense = defense;
-        this.attackName = attackName;
-        this.doubleAttackName = doubleAttackName;
-        this.defenseName = defenseName;
-
-    }
 
     public int attack(Character character) {
         int actualHealth = character.getHealth();
@@ -47,7 +36,7 @@ public abstract class Skill {
         return this.damage;
     }
 
-    public float getDefense() {
+    public double getDefense() {
         return this.defense;
     }
 
@@ -61,6 +50,26 @@ public abstract class Skill {
 
     public String getDefenseName() {
         return this.defenseName;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDamage(int damage) {
+        this.damage = damage;
+    }
+
+    public void setDefense(double defense) {
+        this.defense = defense;
+    }
+
+    public void setAttackName(String attackName) {
+        this.attackName = attackName;
+    }
+
+    public void setDefenseName(String defenseName) {
+        this.defenseName = defenseName;
     }
 
     @Override
