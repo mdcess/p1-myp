@@ -1,7 +1,5 @@
 package src.specialobjects.skills;
 
-import src.characters.Character;
-
 /**
  * Skill
  * 
@@ -18,15 +16,7 @@ public abstract class Skill {
     private String doubleAttackName;
     private String defenseName;
 
-    public int attack(Character character) {
-        int actualHealth = character.getHealth();
-        character.setHealth(actualHealth - damage);
-        return actualHealth - damage;
-    }
-
-    public int doubleAttack(Character character) {
-        return attack(character) + attack(character);
-    }
+    public abstract void attack(Character character);
 
     public String getName() {
         return this.name;

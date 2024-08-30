@@ -10,4 +10,8 @@ public class DefenseSkill extends Skill {
         this.setDefense(0.75);
     }
 
+    public void attack(Character character) {
+
+    }
+
 }
