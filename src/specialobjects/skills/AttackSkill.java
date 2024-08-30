@@ -5,6 +5,9 @@ package src.specialobjects.skills;
  */
 public class AttackSkill extends Skill {
 
+    /**
+     * 
+     */
     public AttackSkill(String name, String attackName, String defenseName) {
         this.setName(name);
         this.setAttackName(attackName);
@@ -13,7 +16,17 @@ public class AttackSkill extends Skill {
         this.setDefense(0.25);
     }
 
+    /**  
+     * 
+     */
     public void attack(Character character){
+
+    }
+
+    /** 
+     * 
+     */
+    public void doubleAttack(Character character){
 
     }
 

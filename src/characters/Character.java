@@ -8,6 +8,7 @@ import src.specialobjects.skills.*;
  * 
  * @author Luis Solares
  * @author mdCess
+ * @author Luis Carlos
  */
 public abstract class Character {
 
@@ -15,14 +16,23 @@ public abstract class Character {
     private int health;
     private Skill skill;
 
+    /**
+     * 
+     * @param character
+     */
     public void attack(Character character) {
-        this.skill.attack(character);
+
     }
 
+    /**
+     * 
+     * @param character
+     */
     public void specialAttack(Character character) {
-        this.skill.doubleAttack(character);
+
     }
 
+    // Getters
     public String getName() {
         return this.name;
     }
@@ -35,12 +45,19 @@ public abstract class Character {
         return this.skill;
     }
 
+    // Setters
     public void setHealth(int health) {
         this.health = health;
     }
 
     public void setSkill(SpecialObject specialObject) {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Personaje" + this.name + "\n" + "Vida actual: " + this.health + "\n" + "Habilidad Actual: "
+                + this.skill.toString();
     }
 
 }

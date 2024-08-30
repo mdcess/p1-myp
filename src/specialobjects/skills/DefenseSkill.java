@@ -1,7 +1,19 @@
 package src.specialobjects.skills;
 
+/**
+ * Defense Skill
+ * Habilidad que prioriza la defensa del personaje
+ * aumentando su nivel de defensa, pero con la
+ * desventaja de que decrementa su nivel de ataque.
+ * 
+ * @author Luis Solares
+ * @author mdCess
+ */
 public class DefenseSkill extends Skill {
 
+    /**
+     * 
+     */
     public DefenseSkill(String name, String attackName, String defenseName) {
         this.setName(name);
         this.setAttackName(attackName);
@@ -10,7 +22,17 @@ public class DefenseSkill extends Skill {
         this.setDefense(0.75);
     }
 
+    /**
+
+     */
     public void attack(Character character) {
+    
+    }
+
+    /**
+     * 
+     */
+    public void doubleAttack(Character character) {
 
     }
 

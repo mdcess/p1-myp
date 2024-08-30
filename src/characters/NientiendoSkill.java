@@ -1,7 +1,7 @@
 package src.characters;
 
 /**
- * 
+ * NientiendoSkill
  */
 public interface NientiendoSkill {
 

@@ -1,7 +1,7 @@
 package src.characters;
 
 /**
- * 
+ * Copcam Skill
  */
 public interface CopcamSkill {
 

@@ -3,6 +3,10 @@ package src.specialobjects.skills;
 /**
  * Skill
  * 
+ * Clase que implementa el comportameinto de una habilidad,
+ * con sus ataques y defensas, al igual que el nivel de las
+ * mismas.
+ * 
  * @author Luis Solares
  * @author mdCess
  * @author luis Carlos
@@ -18,6 +22,9 @@ public abstract class Skill {
 
     public abstract void attack(Character character);
 
+    public abstract void doubleAttack(Character character);
+
+    // Getters
     public String getName() {
         return this.name;
     }
@@ -42,6 +49,7 @@ public abstract class Skill {
         return this.defenseName;
     }
 
+    // Setters
     public void setName(String name) {
         this.name = name;
     }
@@ -56,6 +64,10 @@ public abstract class Skill {
 
     public void setAttackName(String attackName) {
         this.attackName = attackName;
+    }
+
+    public void setDoubleAttackName(String doubleAttackName) {
+        this.doubleAttackName = doubleAttackName;
     }
 
     public void setDefenseName(String defenseName) {
