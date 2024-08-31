@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * Character
  * 
- * @author Luis Roman
+ * 
  */
 public class Battlefield implements Subject {
 
