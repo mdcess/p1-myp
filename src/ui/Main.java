@@ -21,17 +21,6 @@ public class Main {
         battle.addObserver(obs2);
         battle.addObserver(obs3);
 
-        battle.getFighters().get(0).attack(battle.getFighters().get(1));
-        battle.getFighters().set(1, battle.getFighters().get(0).attack(battle.getFighters().get(1)));
-        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
-        System.out.println(battle.getFighters().get(1).toString());
-        battle.getFighters().get(0).setSkill(new ElexirBottle());
-        battle.getFighters().get(0).attack(battle.getFighters().get(1));
-        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
-        battle.getFighters().get(0).doubleAttack(battle.getFighters().get(1));
-        battle.getFighters().set(1, battle.getFighters().get(0).attack(battle.getFighters().get(1)));
-        System.out.println(battle.getFighters().get(1).toString());
-
     }
 
     public static void main(String[] args) {

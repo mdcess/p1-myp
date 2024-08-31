@@ -9,7 +9,8 @@ import java.util.LinkedList;
 /**
  * Character
  * 
- * 
+ * @author Luis Solares
+ * @author mdCess
  */
 public class Battlefield implements Subject {
 
@@ -34,7 +35,7 @@ public class Battlefield implements Subject {
     }
 
     public void removeObserver(Viewer viewer) {
-
+        this.viewers.remove(viewer);
     }
 
     public void notifyObservers() {

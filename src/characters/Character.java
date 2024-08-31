@@ -59,6 +59,18 @@ public abstract class Character {
         return this.skill;
     }
 
+    public String getAttackName() {
+        return this.skill.getAttackName();
+    }
+
+    public String getDoubleAttackName() {
+        return this.skill.getDoubleAttackName();
+    }
+
+    public String getDefenseName() {
+        return this.skill.getDefenseName();
+    }
+
     public void setHealth(int health) {
         this.health = health;
     }
