@@ -1,6 +1,6 @@
 package src.characters;
 
-import src.specialobjects.SpecialObject;
+import src.specialobjects.*;
 import src.specialobjects.skills.Skill;
 
 /**
@@ -15,15 +15,18 @@ public class MeganMan extends Character implements CopcamSkill {
     /**
      * Constructor de MeganMan
      * 
-     * @param name:   nombre del personaje
-     * @param health: salud inicial del personaje
-     * @param skill:  habilidad inicial del personaje
+     * @param name:  nombre del personaje}
+     * @param skill: habilidad inicial del personaje
      */
-    public MeganMan(String name, int health, Skill skill) {
-        super(name, health, skill); // Llama al constructor de Character
+    public MeganMan(String name, Skill skill) {
+        super(name, skill);
     }
 
-    public void setSkill(SpecialObject specialObject) {
+    public void setSkill(ElexirBottle elexirBottle) {
+
+    }
+
+    public void setSkill(RareBerry rareBerry) {
 
     }
 

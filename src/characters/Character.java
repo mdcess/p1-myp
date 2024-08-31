@@ -1,6 +1,6 @@
 package src.characters;
 
-import src.specialobjects.SpecialObject;
+import src.specialobjects.*;
 import src.specialobjects.skills.Skill;
 
 /**
@@ -15,7 +15,7 @@ import src.specialobjects.skills.Skill;
 public abstract class Character {
 
     private String name;
-    private int health;
+    private int health = 100;
     private Skill skill;
 
     /**
@@ -25,9 +25,8 @@ public abstract class Character {
      * @param health: salud inicial del personaje
      * @param skill:  habilidad inicial del personaje
      */
-    public Character(String name, int health, Skill skill) {
+    public Character(String name, Skill skill) {
         this.name = name;
-        this.health = health;
         this.skill = skill;
     }
 
@@ -62,7 +61,9 @@ public abstract class Character {
         this.skill = skill;
     }
 
-    public abstract void setSkill(SpecialObject specialObject);
+    public abstract void setSkill(ElexirBottle elexirBottle);
+
+    public abstract void setSkill(RareBerry rareBerry);
 
     @Override
     public String toString() {

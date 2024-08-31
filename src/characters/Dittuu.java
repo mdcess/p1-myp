@@ -1,6 +1,8 @@
 package src.characters;
 
-import src.specialobjects.SpecialObject;
+import src.specialobjects.*;
+import src.specialobjects.skills.AttackSkill;
+import src.specialobjects.skills.DefenseSkill;
 import src.specialobjects.skills.Skill;
 
 /**
@@ -15,12 +17,16 @@ public class Dittuu extends Character implements ChingopokomonSkill {
      * @param health: salud inicial del personaje
      * @param skill:  habilidad inicial del personaje
      */
-    public Dittuu(String name, int health, Skill skill) {
-        super(name, health, skill); // Llama al constructor de Character
+    public Dittuu(String name, Skill skill) {
+        super(name, skill);
     }
 
-    public void setSkill(SpecialObject specialObject) {
+    public void setSkill(ElexirBottle elexirBottle) {
+        this.setSkill(new DefenseSkill("Recubrimiento", "Golpe certero", "Escupitajo de acido", "Endurecimiento"));
+    }
 
+    public void setSkill(RareBerry rareBerry) {
+        this.setSkill(new AttackSkill("Furia", "Golpes consecutivos", "Expansion de dominio", "Escudo de aire"));
     }
 
     /**
