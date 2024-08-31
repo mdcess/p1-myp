@@ -78,6 +78,197 @@ public class Main {
         write(obs3);
     }
 
+    public static void case02() {
+
+        Viewer obs1 = new Viewer("mdCess", "Korby");
+        Viewer obs2 = new Viewer("Luis", "MeganMan");
+        Viewer obs3 = new Viewer("Lupita", "Dittu");
+
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(2)));
+        System.out.println("MemaMan ataco a Dittuu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(0));
+        battle.getFighters().set(1, battle.getFighters().get(1).attack(battle.getFighters().get(0)));
+        System.out.println("MemaMan ataco a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+
+    }
+
+    public static void case03() {
+
+        Viewer obs1 = new Viewer("mdCess", "Korby");
+        Viewer obs2 = new Viewer("Luis", "MeganMan");
+        Viewer obs3 = new Viewer("Lupita", "Dittu");
+
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        battle.getFighters().set(1, battle.getFighters().get(2).attack(battle.getFighters().get(1)));
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(2).attack(battle.getFighters().get(1)));
+        System.out.println("MegaMan ataco a Dittu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(2).attack(battle.getFighters().get(0));
+        battle.getFighters().set(2, battle.getFighters().get(0).attack(battle.getFighters().get(1)));
+        System.out.println("Dittuu le dio a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(0).setSkill(new ElexirBottle());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        System.out.println("Korby ataco a MegaMan con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+        System.out.println("Korby ataco a Dittu con " + battle.getFighters().get(2).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(2).attack(battle.getFighters().get(0));
+        battle.getFighters().set(2, battle.getFighters().get(0).attack(battle.getFighters().get(1)));
+        System.out.println("Dittuu le dio a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(1).attack(battle.getFighters().get(2));
+        battle.getFighters().set(1, battle.getFighters().get(2).attack(battle.getFighters().get(1)));
+        System.out.println("MegaMan ataco a Dittu con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(0).setSkill(new ElexirBottle());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+        System.out.println("Korby ataco a Dittu con " + battle.getFighters().get(2).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+        System.out.println("Korby ataco a Dittu con " + battle.getFighters().get(2).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(2).attack(battle.getFighters().get(0));
+        battle.getFighters().set(2, battle.getFighters().get(0).attack(battle.getFighters().get(1)));
+        System.out.println("Dittuu le dio a Korby con " + battle.getFighters().get(1).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(0).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+        System.out.println("Korby ataco a Dittu con " + battle.getFighters().get(2).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+        System.out.println("Korby ataco a Dittu con " + battle.getFighters().get(2).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+        System.out.println("Korby ataco a Dittu con " + battle.getFighters().get(2).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(1));
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+        System.out.println("Korby ataco a Dittu con " + battle.getFighters().get(2).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+        System.out.println("Korby ataco a Dittu con " + battle.getFighters().get(2).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(2).toString());
+        System.out.println("Korby ataco a MeganMan con " + battle.getFighters().get(0).getSkill().getAttackName());
+        System.out.println(battle.getFighters().get(1).toString());
+        battle.getFighters().get(0).setSkill(new RareBerry());
+        battle.getFighters().get(0).attack(battle.getFighters().get(2));
+    }
+
     private static void attack(int i, int o) {
         if (i > battle.getFighters().size() || o > battle.getFighters().size())
             return;
@@ -107,10 +298,13 @@ public class Main {
         int i = ran.nextInt(2);
         switch (i) {
             case 0:
-                case01();
+                case01();// El caso uno genera bitacoras
                 break;
 
             case 1:
+                case02();
+            case 2:
+                case03();
 
         }
     }
