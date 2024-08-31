@@ -1,7 +1,5 @@
 package src.specialobjects.skills;
 
-import src.characters.Character;
-
 /**
  * Skill
  * 
