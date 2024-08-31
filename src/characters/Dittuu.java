@@ -23,10 +23,16 @@ public class Dittuu extends Character implements ChingopokomonSkill {
 
     public void setSkill(ElexirBottle elexirBottle) {
         this.setSkill(new DefenseSkill("Recubrimiento", "Golpe certero", "Escupitajo de acido", "Endurecimiento"));
+        this.setLastConsumption(this.getName() + " consumio una " + elexirBottle.getName()
+                + ", ahora tiene la habilidad de " + this.getSkill().getName());
+        this.setLastSpecialObject(elexirBottle);
     }
 
     public void setSkill(RareBerry rareBerry) {
         this.setSkill(new AttackSkill("Furia", "Golpes consecutivos", "Expansion de dominio", "Escudo de aire"));
+        this.setLastConsumption(this.getName() + " consumio una " + rareBerry.getName()
+                + ", ahora tiene la habilidad de " + this.getSkill().getName());
+        this.setLastSpecialObject(rareBerry);
     }
 
     /**

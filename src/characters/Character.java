@@ -1,6 +1,7 @@
 package src.characters;
 
 import src.specialobjects.RareBerry;
+import src.specialobjects.SpecialObject;
 import src.specialobjects.ElexirBottle;
 import src.specialobjects.skills.Skill;
 
@@ -20,6 +21,8 @@ public abstract class Character {
     private Skill skill;
     private String lastAttack;
     private String lastDefense;
+    private String lastConsumption;
+    private SpecialObject lastSpecialObject;
 
     /**
      * Constructor de Character
@@ -49,7 +52,8 @@ public abstract class Character {
 
     public Character doubleAttack(Character character) {
         int finalDamage = character.getHealth();
-        this.lastAttack = this.getName() + " atacó a " + character.getName() + " con " + this.getDoubleAttackName()
+        this.lastAttack = this.getName() + " atacó a " + character.getName() + " con "
+                + this.getDoubleAttackName()
                 + " y causó ";
         character.defend(this.getSkill().getDamage() * 2, this.getName());
         finalDamage = finalDamage - character.getHealth();
@@ -99,12 +103,28 @@ public abstract class Character {
         return this.lastDefense;
     }
 
+    public String getLastConsumption() {
+        return this.lastConsumption;
+    }
+
+    public SpecialObject getLastSpecialObject() {
+        return this.lastSpecialObject;
+    }
+
     public void setHealth(int health) {
         this.health = health;
     }
 
     public void setSkill(Skill skill) {
         this.skill = skill;
+    }
+
+    public void setLastConsumption(String lastConsumption) {
+        this.lastConsumption = lastConsumption;
+    }
+
+    public void setLastSpecialObject(SpecialObject specialObject) {
+        this.lastSpecialObject = specialObject;
     }
 
     @Override

@@ -29,10 +29,16 @@ public class Korby extends Character implements NientiendoSkill {
 
     public void setSkill(ElexirBottle elexirBottle) {
         this.setSkill(new DefenseSkill("Armadura de hierro", "Espadazo", "Espada electrica", "Prision de escudo"));
+        this.setLastConsumption(this.getName() + " consumio una " + elexirBottle.getName()
+                + ", ahora tiene la habilidad de " + this.getSkill().getName());
+        this.setLastSpecialObject(elexirBottle);
     }
 
     public void setSkill(RareBerry rareBerry) {
         this.setSkill(new AttackSkill("Carga de fuego", "Golpe igneo", "Llamarada", "Escudo de fuego"));
+        this.setLastConsumption(this.getName() + " consumio una " + rareBerry.getName()
+                + ", ahora tiene la habilidad de " + this.getSkill().getName());
+        this.setLastSpecialObject(rareBerry);
     }
 
     /**

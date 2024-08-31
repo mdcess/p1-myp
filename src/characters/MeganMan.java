@@ -1,6 +1,8 @@
 package src.characters;
 
 import src.specialobjects.*;
+import src.specialobjects.skills.AttackSkill;
+import src.specialobjects.skills.DefenseSkill;
 import src.specialobjects.skills.Skill;
 
 /**
@@ -23,11 +25,18 @@ public class MeganMan extends Character implements CopcamSkill {
     }
 
     public void setSkill(ElexirBottle elexirBottle) {
-
+        this.setSkill(new DefenseSkill("Partes de Robot", "Bara de Metal", "Bara de Metal Electrica",
+                "Incremento de partes"));
+        this.setLastConsumption(this.getName() + " consumio una " + elexirBottle.getName()
+                + ", ahora tiene la habilidad de " + this.getSkill().getName());
+        this.setLastSpecialObject(elexirBottle);
     }
 
     public void setSkill(RareBerry rareBerry) {
-
+        this.setSkill(new AttackSkill("Brazo de Cuchilla", "Corte", "Corte Profundo", "Malla de Metal"));
+        this.setLastConsumption(this.getName() + " consumio una " + rareBerry.getName()
+                + ", ahora tiene la habilidad de " + this.getSkill().getName());
+        this.setLastSpecialObject(rareBerry);
     }
 
     /**
