@@ -1,11 +1,11 @@
 package src.specialobjects.skills;
 
+import src.characters.Character;
+
 /**
  * Skill
  * 
- * Clase que implementa el comportameinto de una habilidad,
- * con sus ataques y defensas, al igual que el nivel de las
- * mismas.
+ * Clase abstracta que define una habilidad.
  * 
  * @author Luis Solares
  * @author mdCess
@@ -20,54 +20,65 @@ public abstract class Skill {
     private String doubleAttackName;
     private String defenseName;
 
-    public abstract void attack(Character character);
+    /**
+     * Realiza un ataque a un personaje.
+     * 
+     * @param character: el personaje objetivo del ataque
+     * @return un mensaje sobre el ataque realizado
+     */
+    public abstract String attack(Character character);
 
-    public abstract void doubleAttack(Character character);
+    /**
+     * Realiza un ataque especial a un personaje.
+     * 
+     * @param character: el personaje objetivo del ataque especial
+     * @return un mensaje sobre el ataque especial realizado
+     */
+    public abstract String doubleAttack(Character character);
 
-    // Getters
+    // Getters y Setters
     public String getName() {
         return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getDamage() {
         return this.damage;
     }
 
-    public double getDefense() {
-        return this.defense;
-    }
-
-    public String getAttackName() {
-        return this.attackName;
-    }
-
-    public String getDoubleAttackName() {
-        return this.doubleAttackName;
-    }
-
-    public String getDefenseName() {
-        return this.defenseName;
-    }
-
-    // Setters
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public void setDamage(int damage) {
         this.damage = damage;
+    }
+
+    public double getDefense() {
+        return this.defense;
     }
 
     public void setDefense(double defense) {
         this.defense = defense;
     }
 
+    public String getAttackName() {
+        return this.attackName;
+    }
+
     public void setAttackName(String attackName) {
         this.attackName = attackName;
     }
 
+    public String getDoubleAttackName() {
+        return this.doubleAttackName;
+    }
+
     public void setDoubleAttackName(String doubleAttackName) {
         this.doubleAttackName = doubleAttackName;
+    }
+
+    public String getDefenseName() {
+        return this.defenseName;
     }
 
     public void setDefenseName(String defenseName) {
@@ -76,8 +87,9 @@ public abstract class Skill {
 
     @Override
     public String toString() {
-        return "Skill Name: " + getName() + "\n" + "Attack Name:" + getAttackName() + "\n" + "Double Attack Name: "
-                + getDoubleAttackName() + "Defense Name: " + getDefenseName() + "\n";
+        return "Skill Name: " + getName() + "\n" +
+               "Attack Name: " + getAttackName() + "\n" +
+               "Double Attack Name: " + getDoubleAttackName() + "\n" +
+               "Defense Name: " + getDefenseName() + "\n";
     }
-
 }
