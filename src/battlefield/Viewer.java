@@ -5,29 +5,26 @@ import src.characters.Character;
 public class Viewer implements Observer {
 
     private String id;
-    private Character supportedCharacter;
+    private String support;
 
-    public Viewer(String id, Character supportedCharacter) {
+    public Viewer(String id, String support) {
         this.id = id;
-        this.supportedCharacter = supportedCharacter;
+        this.support = support;
     }
 
     public String getId() {
         return id;
     }
 
-    public Character getSupportedCharacter() {
-        return supportedCharacter;
+    public String getSupport() {
+        return support;
     }
 
-    @Override
-    public void update(Battlefield battlefield) {
-        System.out.println("Viewer " + id + " has been notified.");
-        battlefield.displayBattlefieldStatus();
+    public void update() {
     }
 
     @Override
     public String toString() {
-        return "Viewer{id='" + id + "', supportedCharacter=" + supportedCharacter.getName() + "}";
+        return "";
     }
 }

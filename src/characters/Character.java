@@ -1,5 +1,8 @@
 package src.characters;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
+
+import src.specialobjects.SpecialObject;
 import src.specialobjects.skills.Skill;
 
 /**
@@ -20,9 +23,9 @@ public abstract class Character {
     /**
      * Constructor de Character
      * 
-     * @param name: nombre del personaje
+     * @param name:   nombre del personaje
      * @param health: salud inicial del personaje
-     * @param skill: habilidad inicial del personaje
+     * @param skill:  habilidad inicial del personaje
      */
     public Character(String name, int health, Skill skill) {
         this.name = name;
@@ -30,52 +33,14 @@ public abstract class Character {
         this.skill = skill;
     }
 
-    /**
-     * Realiza un ataque a otro personaje.
-     * 
-     * @param character: el personaje objetivo del ataque
-     */
-    public void attack(Character character) {
-        // Realiza el ataque y recibe el mensaje
-        String message = this.skill.attack(character);
-        System.out.println(message);
-
-        // El objetivo recibe el daño
-        int damage = this.skill.getDamage();
-        character.receiveDamage(damage);
+    public Character attack(Character character) {
+        character.defend(this.getSkill().getDamage());
+        return character;
     }
 
-    /**
-     * Maneja la defensa contra un ataque.
-     * 
-     * @param damage: daño recibido antes de aplicar la defensa
-     */
     public void defend(int damage) {
-        double defense = this.skill.getDefense();
-
-        // Calcula el daño efectivo después de aplicar la defensa
-        double effectiveDamage = damage * (1 - defense);
-        this.health -= effectiveDamage;
-
-        // Imprime el mensaje de defensa
-        System.out.println(this.name + " se defiende y recibe " + effectiveDamage + " de daño, salud restante: " + this.health);
-    }
-
-    /**
-     * Reduce la salud del personaje cuando recibe daño.
-     * 
-     * @param damage: daño recibido
-     */
-    public void receiveDamage(int damage) {
-        this.health -= damage;
-        if (this.health <= 0) {
-            die();
-        }
-    }
-
-    public void die() {
-        System.out.println(this.name + " ha muerto.");
-        // Aquí se puede agregar el método para quitar el personaje del campo de batalla
+        int totalDamage = (int) Math.round(this.getHealth() - (damage * this.getSkill().getDefense()));
+        this.setHealth(totalDamage);
     }
 
     // Getters y Setters
@@ -99,10 +64,12 @@ public abstract class Character {
         this.skill = skill;
     }
 
+    public abstract void setSkill(SpecialObject specialObject);
+
     @Override
     public String toString() {
         return "Personaje " + this.name + "\n" +
-               "Vida actual: " + this.health + "\n" +
-               "Habilidad Actual: " + this.skill.toString();
+                "Vida actual: " + this.health + "\n" +
+                "Habilidad Actual: " + this.skill.toString();
     }
 }

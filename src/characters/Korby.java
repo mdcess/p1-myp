@@ -1,5 +1,8 @@
 package src.characters;
 
+import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
+
+import src.specialobjects.SpecialObject;
 import src.specialobjects.skills.Skill;
 
 /**
@@ -16,12 +19,16 @@ public class Korby extends Character implements NientiendoSkill {
     /**
      * Constructor de Korby
      * 
-     * @param name: nombre del personaje
+     * @param name:   nombre del personaje
      * @param health: salud inicial del personaje
-     * @param skill: habilidad inicial del personaje
+     * @param skill:  habilidad inicial del personaje
      */
     public Korby(String name, int health, Skill skill) {
         super(name, health, skill); // Llama al constructor de Character
+    }
+
+    public void setSkill(SpecialObject specialObject) {
+
     }
 
     /**
