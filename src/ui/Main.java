@@ -4,9 +4,10 @@ import src.battlefield.Battlefield;
 import src.battlefield.Viewer;
 import src.specialobjects.ElexirBottle;
 import src.specialobjects.RareBerry;
+import src.specialobjects.SpecialObject;
 
 /**
- * 
+ * Clase Main que inicia con una simulación aleatoria.
  */
 public class Main {
 
@@ -24,18 +25,29 @@ public class Main {
 
         battle.getFighter(0).attack(battle.getFighter(1));
         battle.notifyObservers(battle.getFighter(0), battle.getFighter(1));
-        System.out.println(battle.getFighter(0).getLastAttack());
-        System.out.println(battle.getFighter(1).getLastDefense());
+
         battle.getFighter(0).doubleAttack(battle.getFighter(1));
         battle.notifyObservers(battle.getFighter(0), battle.getFighter(1));
         battle.getFighter(0).setSkill(new RareBerry());
         battle.notifyObservers(battle.getFighter(0));
 
-        System.out.println(battle.getFighter(0).getLastAttack());
-        System.out.println(battle.getFighter(1).getLastDefense());
         System.out.println(obs1.getBinnacle());
         System.out.println(obs2.getBinnacle());
 
+    }
+
+    private void attack(int i, int o) {
+        battle.getFighter(i).attack(battle.getFighter(o));
+        battle.notifyObservers(battle.getFighter(i), battle.getFighter(o));
+    }
+
+    private void doubleAttack(int i, int o) {
+        battle.notifyObservers(battle.getFighter(i), battle.getFighter(o));
+    }
+
+    private void consume(int i, SpecialObject specialObject) {
+        battle.getFighter(i).setSkill(new RareBerry());
+        battle.notifyObservers(battle.getFighter(i));
     }
 
     public static void main(String[] args) {

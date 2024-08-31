@@ -2,7 +2,6 @@ package src.battlefield;
 
 import src.characters.Character;
 import src.characters.*;
-import src.specialobjects.SpecialObject;
 import src.specialobjects.skills.BaseSkill;
 
 import java.util.LinkedList;
