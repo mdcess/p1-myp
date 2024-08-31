@@ -35,6 +35,11 @@ public abstract class Character {
         return character;
     }
 
+    public Character doubleAttack(Character character) {
+        character.defend(this.getSkill().getDamage() * 2);
+        return character;
+    }
+
     public void defend(int damage) {
         int totalDamage = (int) Math.round(this.getHealth() - (damage * this.getSkill().getDefense()));
         this.setHealth(totalDamage);

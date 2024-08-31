@@ -30,7 +30,7 @@ public class Battlefield implements Subject {
     }
 
     public void addObserver(Viewer viewer) {
-
+        this.viewers.add(viewer);
     }
 
     public void removeObserver(Viewer viewer) {

@@ -20,22 +20,6 @@ public abstract class Skill {
     private String doubleAttackName;
     private String defenseName;
 
-    /**
-     * Realiza un ataque a un personaje.
-     * 
-     * @param character: el personaje objetivo del ataque
-     * @return un mensaje sobre el ataque realizado
-     */
-    public abstract String attack(Character character);
-
-    /**
-     * Realiza un ataque especial a un personaje.
-     * 
-     * @param character: el personaje objetivo del ataque especial
-     * @return un mensaje sobre el ataque especial realizado
-     */
-    public abstract String doubleAttack(Character character);
-
     // Getters y Setters
     public String getName() {
         return this.name;
@@ -88,8 +72,8 @@ public abstract class Skill {
     @Override
     public String toString() {
         return "Skill Name: " + getName() + "\n" +
-               "Attack Name: " + getAttackName() + "\n" +
-               "Double Attack Name: " + getDoubleAttackName() + "\n" +
-               "Defense Name: " + getDefenseName() + "\n";
+                "Attack Name: " + getAttackName() + "\n" +
+                "Double Attack Name: " + getDoubleAttackName() + "\n" +
+                "Defense Name: " + getDefenseName() + "\n";
     }
 }
