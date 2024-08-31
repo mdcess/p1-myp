@@ -18,6 +18,8 @@ public abstract class Character {
     private String name;
     private int health = 100;
     private Skill skill;
+    private String lastAttack;
+    private String lastDefense;
 
     /**
      * Constructor de Character
@@ -32,7 +34,11 @@ public abstract class Character {
     }
 
     public Character attack(Character character) {
+        int finalDamage = character.getHealth();
+        this.lastAttack = this.getName() + "atacó a " + character.getName() + " y causó ";
         character.defend(this.getSkill().getDamage());
+        finalDamage = finalDamage - character.getHealth();
+        this.lastAttack = this.lastAttack + finalDamage + " de daño.";
         return character;
     }
 

@@ -21,6 +21,8 @@ public class Main {
         battle.addObserver(obs2);
         battle.addObserver(obs3);
 
+        battle.getFighter(0).attack(battle.getFighter(1));
+
     }
 
     public static void main(String[] args) {

@@ -50,4 +50,8 @@ public class Battlefield implements Subject {
         return this.fighters;
     }
 
+    public Character getFighter(int i) {
+        return this.fighters.get(i);
+    }
+
 }
