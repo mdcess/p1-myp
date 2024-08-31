@@ -33,23 +33,37 @@ public abstract class Character {
         this.skill = skill;
     }
 
+    public abstract void setSkill(ElexirBottle elexirBottle);
+
+    public abstract void setSkill(RareBerry rareBerry);
+
     public Character attack(Character character) {
         int finalDamage = character.getHealth();
-        this.lastAttack = this.getName() + "atacó a " + character.getName() + " y causó ";
-        character.defend(this.getSkill().getDamage());
+        this.lastAttack = this.getName() + " atacó a " + character.getName() + " con " + this.getAttackName()
+                + " y causó ";
+        character.defend(this.getSkill().getDamage(), this.getName());
         finalDamage = finalDamage - character.getHealth();
         this.lastAttack = this.lastAttack + finalDamage + " de daño.";
         return character;
     }
 
     public Character doubleAttack(Character character) {
-        character.defend(this.getSkill().getDamage() * 2);
+        int finalDamage = character.getHealth();
+        this.lastAttack = this.getName() + " atacó a " + character.getName() + " con " + this.getDoubleAttackName()
+                + " y causó ";
+        character.defend(this.getSkill().getDamage() * 2, this.getName());
+        finalDamage = finalDamage - character.getHealth();
+        this.lastAttack = this.lastAttack + finalDamage + " de daño.";
         return character;
     }
 
-    public void defend(int damage) {
+    public void defend(int damage, String character) {
+        this.lastDefense = this.getName() + " recibio un ataque de " + character + " y se defendio con "
+                + this.getDefenseName() + ", redujo el daño en %" + this.skill.getDefense() * 100
+                + ", su vida actual es de ";
         int totalDamage = (int) Math.round(this.getHealth() - (damage * this.getSkill().getDefense()));
         this.setHealth(totalDamage);
+        this.lastDefense = this.lastDefense + this.getHealth();
     }
 
     // Getters y Setters
@@ -77,6 +91,14 @@ public abstract class Character {
         return this.skill.getDefenseName();
     }
 
+    public String getLastAttack() {
+        return this.lastAttack;
+    }
+
+    public String getLastDefense() {
+        return this.lastDefense;
+    }
+
     public void setHealth(int health) {
         this.health = health;
     }
@@ -84,10 +106,6 @@ public abstract class Character {
     public void setSkill(Skill skill) {
         this.skill = skill;
     }
-
-    public abstract void setSkill(ElexirBottle elexirBottle);
-
-    public abstract void setSkill(RareBerry rareBerry);
 
     @Override
     public String toString() {

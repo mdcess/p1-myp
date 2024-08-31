@@ -10,15 +10,15 @@ public class Viewer implements Observer {
         this.support = support;
     }
 
+    public void update(String battle) {
+    }
+
     public String getId() {
         return id;
     }
 
     public String getSupport() {
         return support;
-    }
-
-    public void update() {
     }
 
     @Override

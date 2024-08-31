@@ -1,5 +1,5 @@
 package src.battlefield;
 
 public interface Observer {
-    void update();
+    void update(String battle);
 }

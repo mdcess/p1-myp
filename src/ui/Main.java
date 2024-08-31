@@ -22,6 +22,11 @@ public class Main {
         battle.addObserver(obs3);
 
         battle.getFighter(0).attack(battle.getFighter(1));
+        System.out.println(battle.getFighter(0).getLastAttack());
+        System.out.println(battle.getFighter(1).getLastDefense());
+        battle.getFighter(0).doubleAttack(battle.getFighter(1));
+        System.out.println(battle.getFighter(0).getLastAttack());
+        System.out.println(battle.getFighter(1).getLastDefense());
 
     }
 
