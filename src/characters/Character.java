@@ -1,7 +1,5 @@
 package src.characters;
 
-import javax.swing.text.html.HTMLDocument.HTMLReader.SpecialAction;
-
 import src.specialobjects.SpecialObject;
 import src.specialobjects.skills.Skill;
 

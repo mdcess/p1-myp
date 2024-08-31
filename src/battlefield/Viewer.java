@@ -1,7 +1,5 @@
 package src.battlefield;
 
-import src.characters.Character;
-
 public class Viewer implements Observer {
 
     private String id;

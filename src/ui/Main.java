@@ -2,7 +2,6 @@ package src.ui;
 
 import src.battlefield.Battlefield;
 import src.battlefield.Viewer;
-import src.characters.Korby;
 import src.specialobjects.ElexirBottle;
 
 /**
