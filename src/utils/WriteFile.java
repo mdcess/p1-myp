@@ -1,22 +1,29 @@
 package src.utils;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+
 public class WriteFile {
 
-    public static void writeFile(String content, String path) {
-    
-        File file = new File(path);
+    public static void writeFile(String name, String content) {
+        try {
+            String nombreArchivo = name;
 
-        file.getParentFile().mkdirs();
+            File archivo = new File(nombreArchivo);
+            if (!archivo.exists()) {
+                archivo.createNewFile();
+            }
 
-    
-        try (FileWriter writer = new FileWriter(file)) {
-            writer.write(content);
+            FileWriter fw = new FileWriter(archivo);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(content);
+
+            bw.close();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }   
-
+    }
 }
