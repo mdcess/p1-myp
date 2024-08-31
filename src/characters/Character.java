@@ -1,6 +1,7 @@
 package src.characters;
 
-import src.specialobjects.*;
+import src.specialobjects.RareBerry;
+import src.specialobjects.ElexirBottle;
 import src.specialobjects.skills.Skill;
 
 /**
